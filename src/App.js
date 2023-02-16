@@ -7,8 +7,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<div>s</div>} />
-          <Route path="/cosas" element={<div>cosas</div>} />
-          <Route path="/hacer" element={<div>lista</div>} />
+          <Route path="/cosas" element={<div>sea</div>} />
         </Routes>
       </BrowserRouter>
     </>
