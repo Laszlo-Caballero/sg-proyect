@@ -1,7 +1,16 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 function App() {
-  return <div>a</div>;
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<div>a</div>} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 }
 
 export default App;
