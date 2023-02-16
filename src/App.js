@@ -8,6 +8,7 @@ function App() {
         <Routes>
           <Route path="/" element={<div>s</div>} />
           <Route path="/cosas" element={<div>cosas</div>} />
+          <Route path="/hacer" element={<div>lista</div>} />
         </Routes>
       </BrowserRouter>
     </>
