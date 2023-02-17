@@ -1,0 +1,10 @@
+*{
+    font-family: "font-formal", 'Courier New', Courier, monospace;
+}
+body{
+    background: #233142;
+}
+@font-face {
+    font-family: "font-formal";
+    src: url(./font/GlacialIndifference-Regular.otf);
+}
