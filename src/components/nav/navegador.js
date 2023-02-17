@@ -5,6 +5,9 @@ function navegador() {
   return (
     <ul className="nav">
       <li>
+        <img className="logo" alt="logo" src={require("./logo.png")} />
+      </li>
+      <li>
         <NavLink to="/">Inicio</NavLink>
       </li>
       <li>
@@ -13,7 +16,7 @@ function navegador() {
       <li>
         <NavLink to="/tabs">Recursos</NavLink>
       </li>
-      <li></li>
+
       <li>
         <NavLink to="/login">Login</NavLink>
       </li>

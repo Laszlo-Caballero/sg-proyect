@@ -1,8 +1,9 @@
 *{
     font-family: "font-formal", 'Courier New', Courier, monospace;
+    color: #eaf0ea;
 }
 body{
-    background: #233142;
+    background: #000026;
 }
 @font-face {
     font-family: "font-formal";

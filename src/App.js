@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Navegador from "./components/nav/navegador";
+import Inicio from "./pages/inicio/inicio";
+import Final from "./components/footer/final";
 function App() {
   return (
     <>
@@ -8,10 +10,15 @@ function App() {
         <header>
           <Navegador />
         </header>
-        <Routes>
-          <Route path="/" element={<div>s</div>} />
-          <Route path="/cosas" element={<div>sea</div>} />
-        </Routes>
+        <section>
+          <Routes>
+            <Route path="/" element={<Inicio />} />
+            <Route path="/cosas" element={<div>sea</div>} />
+          </Routes>
+        </section>
+        <footer>
+          <Final />
+        </footer>
       </BrowserRouter>
     </>
   );
