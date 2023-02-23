@@ -1,25 +1,27 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import Navegador from "./components/nav/navegador";
 import Inicio from "./pages/inicio/inicio";
 import Final from "./components/footer/final";
 function App() {
+  const location = useLocation();
   return (
     <>
-      <BrowserRouter>
+      {location.pathname !== "/login" && location.pathname !== "/register" && (
         <header>
           <Navegador />
         </header>
-        <section>
-          <Routes>
-            <Route path="/" element={<Inicio />} />
-            <Route path="/cosas" element={<div>sea</div>} />
-          </Routes>
-        </section>
-        <footer>
-          <Final />
-        </footer>
-      </BrowserRouter>
+      )}
+      <section>
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/login" element={<div>sea</div>} />
+          <Route path="/register" element={<div>sea1</div>} />
+        </Routes>
+      </section>
+      <footer>
+        <Final />
+      </footer>
     </>
   );
 }
