@@ -12,6 +12,7 @@ function final() {
         rerum, voluptatem commodi cum iure reprehenderit animi, fugiat debitis
         ipsa! Ducimus, voluptas.
       </p>
+      <div className="redes-"></div>
     </div>
   );
 }

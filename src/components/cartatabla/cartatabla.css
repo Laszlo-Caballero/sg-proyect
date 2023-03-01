@@ -1,0 +1,44 @@
+.carta{
+    height: auto;
+    width: 300px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.cover{
+    margin: 10px;
+    height: 250px;
+    width: auto;
+}
+.botonCoverContenedor{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.tituloCover{
+    font-size: 20px;
+}
+.cartaRecursos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.botonCover{
+    margin-bottom: 30px;
+    margin-right: 20px;
+    background:rgba(253, 128, 208, 0.4);
+    border: none;
+    height: auto;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
