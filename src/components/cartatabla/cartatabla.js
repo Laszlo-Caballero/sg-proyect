@@ -2,16 +2,14 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./cartatabla.css";
 
-function Cartatabla() {
+function Cartatabla(props) {
   const [hovered, sethover] = useState(false);
 
   const onhover = () => {
     sethover(true);
-    console.log(hovered);
   };
   const leavehover = () => {
     sethover(false);
-    console.log(hovered);
   };
   return (
     <div
@@ -20,8 +18,8 @@ function Cartatabla() {
       className="carta"
       style={{ backgroundColor: "#252525" }}>
       <div className="imagenesCover">
-        <img className="cover" alt="cover" src={require(`./mvv 2_after.jpg`)} />
-        <Link to={"mvv2"}>
+        <img className="cover" alt="cover" src={props.urlimagen} />
+        <Link to={props.enlace}>
           <img
             className="iconoCover"
             alt="play"
@@ -31,8 +29,8 @@ function Cartatabla() {
         </Link>
       </div>
       <div className="cartaRecursos">
-        <p className="tituloCover"> Gira Me Veras Volver #2</p>
-        <p className="descripcionCover">2008 - Soda Stereo</p>
+        <p className="tituloCover"> {props.titulo}</p>
+        <p className="descripcionCover">{props.descripcion}</p>
       </div>
     </div>
   );

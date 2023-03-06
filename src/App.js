@@ -5,6 +5,7 @@ import Inicio from "./pages/inicio/inicio";
 import Nosotros from "./pages/nosotros/nosotros";
 import Recursos from "./pages/recursos/recursos";
 import Final from "./components/footer/final";
+import Pruebas from "./pages/pruebas/pruebas";
 function App() {
   const location = useLocation();
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/tabs" element={<Recursos />} />
           <Route path="/login" element={<div>sea</div>} />
           <Route path="/register" element={<div>sea1</div>} />
+          <Route path="/pruebas" element={<Pruebas />} />
         </Routes>
       </section>
       <footer>
