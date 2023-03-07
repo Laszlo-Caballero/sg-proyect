@@ -13,3 +13,6 @@
 .nav li a{
     text-decoration: none;
 }
+.nav li p{
+    cursor: pointer;
+}

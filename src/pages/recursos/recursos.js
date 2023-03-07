@@ -17,9 +17,9 @@ function Recursos() {
     <div className="main">
       {estado === true &&
         estadodata.map((datos) => {
-          console.log(datos);
           return (
             <Cartatabla
+              key={datos.id}
               urlimagen={`https://localhost:3001/${datos.imagen}.${datos.tipo}`}
               titulo={datos.titulo}
               descripcion={datos.descripcion}

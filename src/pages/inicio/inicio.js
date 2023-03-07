@@ -23,7 +23,7 @@ function inicio() {
           voluptatum vitae veritatis natus quisquam nesciunt eos, aliquam
           placeat eligendi sint.
         </p>
-        <Link to="recursos">
+        <Link to="tabs">
           <button className="boton"> Lorem, ipsum.</button>
         </Link>
       </div>

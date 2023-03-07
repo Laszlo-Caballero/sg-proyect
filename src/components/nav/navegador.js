@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./nav.css";
-function navegador() {
+function navegador(props) {
   return (
     <>
       <ul className="nav">
@@ -19,10 +19,10 @@ function navegador() {
         </li>
 
         <li>
-          <NavLink to="/login">Login</NavLink>
+          <p onClick={props.funcionLogin}>Login</p>
         </li>
         <li>
-          <NavLink to="register">Registrarme</NavLink>
+          <p onClick={props.funcionRegister}>Registrarme</p>
         </li>
       </ul>
     </>
