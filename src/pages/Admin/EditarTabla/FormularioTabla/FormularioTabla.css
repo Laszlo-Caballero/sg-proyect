@@ -1,0 +1,14 @@
+.containerFormulario{
+    margin: 50px;
+    color: #eaf0ea;
+}
+.containerBotonActualizar{
+    display: flex;
+    justify-content: center;
+}
+.botonActualizarFormulario{
+    margin-top: 20px;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+}

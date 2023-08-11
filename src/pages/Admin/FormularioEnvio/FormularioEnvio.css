@@ -1,0 +1,32 @@
+
+.containerFormulario{
+    margin: 50px;
+    color: #eaf0ea;
+}
+
+.continerColumnaImagen{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+.inputImagen{
+    margin-left: 150px;
+}
+.botonEliminar{
+    color: black;
+}
+.containerEliminar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.containerBotonEnviar{
+    display: flex;
+    justify-content: center;
+}
+.botonEnviarFormulario{
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+}

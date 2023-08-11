@@ -1,0 +1,73 @@
+.carta{
+    height: auto;
+    width: 290px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.imagenesCover{
+    position: relative;
+    margin: 10px;
+}
+.iconoCoverPruebas{
+    position: absolute;
+    height: 70px;
+    width: auto;
+    bottom: 0px;
+    right: 0px;
+    background-color: green;
+    border-radius: 100%;
+    z-index: 1;
+    cursor: pointer;
+}
+.iconoCoverPruebas:hover{
+    height: 90px;
+    width: auto;
+    top: 140px;
+    left: 170px;
+}
+.coverPruebas{
+    height: 200px;
+    width: auto;
+}
+.botonCoverContenedor{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tituloCover{
+    font-size: 20px;
+    padding: auto;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+.descripcionCover{
+    margin-bottom: 30px;
+}
+.cartaRecursos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-left: 50px;
+
+}
+.botonCover{
+    margin-bottom: 30px;
+    margin-right: 20px;
+    background:rgba(253, 128, 208, 0.4);
+    border: none;
+    height: auto;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}

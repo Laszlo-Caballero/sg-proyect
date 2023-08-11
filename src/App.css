@@ -1,0 +1,13 @@
+*{
+    font-family: "font-formal", 'Courier New', Courier, monospace;
+    
+}
+body{ 
+    background: #000026;
+    background-image: url(./fondo.png);
+    background-repeat: no-repeat;
+}
+@font-face {
+    font-family: "font-formal";
+    src: url(./font/GlacialIndifference-Regular.otf);
+}

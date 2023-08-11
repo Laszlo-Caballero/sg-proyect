@@ -1,0 +1,12 @@
+.continerColumna{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+.inputParte{
+    color: black;
+    margin-left: 5px;
+}
+.textFormulario{
+    font-size: 20px;
+}

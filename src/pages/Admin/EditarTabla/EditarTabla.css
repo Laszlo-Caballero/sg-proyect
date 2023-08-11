@@ -1,0 +1,28 @@
+.continerTabla{
+    width: auto;
+    height: auto;
+}
+.tabla{
+    width: 100%;
+    border-collapse: collapse;
+    color: #eaf0ea;
+}
+.cuerpoTabla, .cabezeraFila, .cabezeraColumna, .cuerpoFila, .cuerpoCelda{
+    border: 2px solid white;
+}
+.cuerpoCelda{
+    padding: 20px;
+}
+.continerBotonesEditar{
+    display: flex;
+    justify-content: space-evenly;
+}
+.botonesEditar{
+    color: black;
+    padding: 15px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.edit{
+    color: black;
+}

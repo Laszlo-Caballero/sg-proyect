@@ -1,0 +1,34 @@
+.container{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px;
+}
+.contenedor-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.texto{
+    height: auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap column;
+    position: relative;
+    margin: 50px;
+}
+.titulo{
+    margin: 50px;
+}
+.boton{
+    background: #4f0c45;
+    border: none;
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    color: #eaf0ea;
+}

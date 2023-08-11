@@ -1,0 +1,36 @@
+.overlayModal{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainModal{
+    background: #07042c;
+    position: relative;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.exitbuttom{
+    height: 30px;
+    width: auto;
+    margin: 10px;
+    background-color: transparent;
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
+}
+.exitcontainer{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+}
