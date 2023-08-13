@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Play from "./play.png";
+import Play from "./play.webp";
 import "./Albumcard.css";
 
 function Albumcard(props) {

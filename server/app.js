@@ -13,14 +13,6 @@ app.use(bodyparser.json());
 app.use("/api", require("./routers"));
 app.use(express.static("storage"));
 
-/*https
-  .createServer(
-    {
-      key: fs.readFileSync("server.key"),
-      cert: fs.readFileSync("server.cer"),
-    },
-    app
-  )*/
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
