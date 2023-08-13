@@ -29,18 +29,9 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Inicio />} />
-          <Route path="/nosotros" element={<Nosotros />} />
-          <Route path="/tabs" element={<Recursos />} />
-          <Route path="/pruebas" element={<Adminpanel />} />
-          {data.map((datos) => {
-            return (
-              <Route
-                key={datos.id}
-                path={`/tabs/${datos.enlace}`}
-                element={<div>{datos.enlace}</div>}
-              />
-            );
-          })}
+          <Route path="nosotros" element={<Nosotros />} />
+          <Route path="tabs/*" element={<Recursos />}></Route>
+          <Route path="pruebas" element={<Adminpanel />} />
         </Routes>
       </section>
       <footer>
