@@ -21,13 +21,17 @@ function FormularioTabla({
     nombre: imagennombre,
     tipo: imagentipo,
   });
+  const formdata = new FormData();
+  const url = "http://localhost:3001/api/albumes";
   const enviar = (e) => {
     e.preventDefault();
-    let url;
     if (selecionarImagen.name) {
-      const formdata = new FormData();
       formdata.append("file", selecionarImagen);
-      url = `http://localhost:3001/api/albumes/${valoridOriginal}/${valorId}/${valorTitulo}/${valorDescripcion}/${valorEnlace}`;
+      formdata.append("id", valoridOriginal);
+      formdata.append("idu", valorId);
+      formdata.append("titulo", valorTitulo);
+      formdata.append("descripcion", valorDescripcion);
+      formdata.append("enlace", valorEnlace);
       axios
         .put(url, formdata)
         .then((response) => {
@@ -37,9 +41,15 @@ function FormularioTabla({
           console.error(error);
         });
     } else {
-      url = `http://localhost:3001/api/albumes/${valoridOriginal}/${valorId}/${selecionarImagen.nombre}/${selecionarImagen.tipo}/${valorTitulo}/${valorDescripcion}/${valorEnlace}`;
+      formdata.append("id", valoridOriginal);
+      formdata.append("idu", valorId);
+      formdata.append("nombre", selecionarImagen.nombre);
+      formdata.append("tipo", selecionarImagen.tipo);
+      formdata.append("titulo", valorTitulo);
+      formdata.append("descripcion", valorDescripcion);
+      formdata.append("enlace", valorEnlace);
       axios
-        .put(url)
+        .put(url, formdata)
         .then((response) => {
           console.log(response.data);
         })

@@ -28,8 +28,8 @@ const eliminarDatos = (req, res) => {
 
 const actualizarDatos = (req, res) => {
   const { file } = req;
-  const { id, idu, titulo, descripcion, enlace } = req.params;
-  const nombre = req.params.nombre || file.filename.split(".").shift();
+  const { id, idu, titulo, descripcion, enlace } = req.body;
+  const nombre = req.body.nombre || file.filename.split(".").shift();
   if (file != null) {
     ConvertirWebp(file);
   }

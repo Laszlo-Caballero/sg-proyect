@@ -11,10 +11,6 @@ router.get("/", pedirDatos);
 
 router.delete("/:id/:nombre", eliminarDatos);
 
-router.put(
-  "/:id/:idu/:nombre?/:tipo?/:titulo/:descripcion/:enlace",
-  subirArchivo.single("file"),
-  actualizarDatos
-);
+router.put("/", subirArchivo.single("file"), actualizarDatos);
 
 module.exports = router;
