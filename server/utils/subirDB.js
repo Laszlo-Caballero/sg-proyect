@@ -29,7 +29,9 @@ const registrarDB = (usuario, correo, contraseña, res) => {
         });
       });
     } else {
-      res.send("no se pudo registrar");
+      res
+        .status(404)
+        .json({ error: "hay una persona con el correo o el usuario" });
     }
   });
 };
