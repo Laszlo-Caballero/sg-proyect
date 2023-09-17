@@ -20,6 +20,22 @@
     font-size: 30px;
     margin-bottom: 20px;
 }
-.formularioRegister input{
+.inputRegister{
+    height: 30px;
+    width: 180px;
+}
+.divInputRegister{
     margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 250px;
+}
+.inputEnviarRegister{
+    margin-top: 20px;
+    height: 40px;
+    width: 120px;
 }

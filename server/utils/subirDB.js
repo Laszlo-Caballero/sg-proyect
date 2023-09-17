@@ -25,12 +25,12 @@ const registrarDB = (usuario, correo, contraseña, res) => {
         const comando = `INSERT INTO token(user_id, token) VALUES (${id}, "${token}")`;
         connection.query(comando, (error, result) => {
           if (error) throw error;
-          res.send(result);
+          res.json({ mensaje: "se registro correctamente" });
         });
       });
     } else {
       res
-        .status(404)
+        .status(401)
         .json({ error: "hay una persona con el correo o el usuario" });
     }
   });
