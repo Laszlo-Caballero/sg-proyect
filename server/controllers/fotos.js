@@ -1,6 +1,6 @@
 const agruparTitulo = require("../utils/agruparTitulo");
-const subirDB = require("../utils/subirDB");
 const ConvertirWebp = require("../utils/ConvertirWebp");
+const { subirDBAlbumes } = require("../utils/subirDB");
 /**
  *
  * @param {*} req
@@ -14,7 +14,7 @@ const subirFotos = (req, res) => {
   const { id, titulo, descripcion, enlace } = req.body;
   const subirTitulo = agruparTitulo(titulo);
   const subriDescripcion = agruparTitulo(descripcion);
-  subirDB(id, nombreFoto, "webp", subirTitulo, subriDescripcion, enlace);
+  subirDBAlbumes(id, nombreFoto, "webp", subirTitulo, subriDescripcion, enlace);
   res.send("se envio");
 };
 

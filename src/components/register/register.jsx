@@ -8,7 +8,7 @@ function Register({ setEstadoRegister }) {
   const {
     register,
     handleSubmit,
-    formState: { errors, touched },
+    formState: { errors },
   } = useForm();
   const onSubmit = (data) => console.log(data);
   return (
@@ -37,7 +37,7 @@ function Register({ setEstadoRegister }) {
                 type="text"
                 {...register("usuario", { required: "Se requiere Usuario" })}
               />
-              {errors.usuario && <p>{errors.Usuario.message}</p>}
+              {errors.usuario && <p>{errors.usuario.message}</p>}
               <input
                 type="email"
                 {...register("email", {

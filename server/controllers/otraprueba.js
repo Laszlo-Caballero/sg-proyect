@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-router.use("/register", require("./usuario/register"));
+router.get("/", (req, res) => {
+  res.send("holas");
+});
 
 module.exports = router;

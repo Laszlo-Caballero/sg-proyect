@@ -10,7 +10,7 @@ const eliminarExtencion = (fileName) => {
 
 fs.readdirSync(DIRECTORIO_RUTAS).filter((file) => {
   const name = eliminarExtencion(file);
-  if (name != "index") {
+  if (name != "index" && name != "usuario") {
     router.use(`/${name}`, require(`./${file}`));
   }
 });
