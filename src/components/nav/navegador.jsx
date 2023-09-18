@@ -50,9 +50,15 @@ function navegador(props) {
             <div
               className="submenu"
               style={{ display: mostrarDiv ? "block" : "none" }}>
-              <NavLink to="/usuario" onClick={() => setMostrarDiv(false)}>
-                Usuario
-              </NavLink>
+              {state[0].tipo == "admin" ? (
+                <NavLink to="/admin" onClick={() => setMostrarDiv(false)}>
+                  Admin
+                </NavLink>
+              ) : (
+                <NavLink to="/usuario" onClick={() => setMostrarDiv(false)}>
+                  Usuario
+                </NavLink>
+              )}
               <p
                 onClick={() => {
                   dispatch(deleteUsuer());

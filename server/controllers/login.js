@@ -3,7 +3,7 @@ const connection = sqlC();
 
 const login = (req, res) => {
   const { email, contraseña } = req.body;
-  const comando = `select usuario, correo, contraseña, token from usuarios inner join token on usuarios.id = token.user_id where correo = "${email}" and contraseña = "${contraseña}"`;
+  const comando = `select usuario, correo, contraseña, tipo, token from usuarios inner join token on usuarios.id = token.user_id where correo = "${email}" and contraseña = "${contraseña}"`;
   connection.query(comando, (error, result) => {
     if (result.length > 0) {
       res.send(result);

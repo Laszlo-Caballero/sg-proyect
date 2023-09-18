@@ -9,7 +9,8 @@ import Recursos from "./pages/recursos/recursos";
 import Final from "./components/footer/final";
 import { useState } from "react";
 import Adminpanel from "./pages/Admin/AdminPanel";
-
+import { PortectedRoute } from "./components/ruta protegida/protectedRoute";
+import { useSelector } from "react-redux";
 function App() {
   const [estadoModalogin, setEstadoLogin] = useState(false);
   const [estadoModaRegister, setEstadoRegister] = useState(false);
@@ -19,6 +20,9 @@ function App() {
   const register = () => {
     setEstadoRegister(!estadoModaRegister);
   };
+  const user = useSelector((state) => state.user);
+  const estadoTipo = user[0]?.tipo || "";
+
   return (
     <>
       <header>
@@ -34,7 +38,26 @@ function App() {
           <Route path="nosotros" element={<Nosotros />} />
           <Route path="tabs/*" element={<Recursos />}></Route>
           <Route path="pruebas" element={<Adminpanel />} />
-          <Route path="usuario" element={<Adminpanel />} />
+          <Route
+            path="/usuario"
+            element={
+              <PortectedRoute
+                redireccionar="/tabs"
+                permisos={user.length === 0}>
+                <div>usuario normal</div>
+              </PortectedRoute>
+            }
+          />
+          <Route
+            path="/admin"
+            element={
+              <PortectedRoute
+                redireccionar="/tabs"
+                permisos={user.length === 0 && estadoTipo != "admin"}>
+                <Adminpanel />
+              </PortectedRoute>
+            }
+          />
         </Routes>
       </section>
       <footer>

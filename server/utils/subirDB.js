@@ -20,8 +20,9 @@ const registrarDB = (usuario, correo, contraseña, res) => {
       connection.query(comando, (error, result) => {
         if (error) throw error;
         const id = result.insertId;
+        console.log(result.insertId);
         const secretkey = process.env.Password;
-        const token = jwt.sign({ id }, secretkey);
+        const token = jwt.sign({ id, tipo_Usuario: "usuario" }, secretkey);
         const comando = `INSERT INTO token(user_id, token) VALUES (${id}, "${token}")`;
         connection.query(comando, (error, result) => {
           if (error) throw error;
