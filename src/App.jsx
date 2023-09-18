@@ -34,6 +34,7 @@ function App() {
           <Route path="nosotros" element={<Nosotros />} />
           <Route path="tabs/*" element={<Recursos />}></Route>
           <Route path="pruebas" element={<Adminpanel />} />
+          <Route path="usuario" element={<Adminpanel />} />
         </Routes>
       </section>
       <footer>
