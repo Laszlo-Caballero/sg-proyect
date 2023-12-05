@@ -10,7 +10,6 @@ import EmailIcon from "@mui/icons-material/Email";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addUser } from "../../features/users/userSlice";
-import Cookies from "js-cookie";
 function Login({ setestadoLogin }) {
   const dispatch = useDispatch();
   const url = `http://localhost:3001/api/user/login`;
@@ -24,7 +23,7 @@ function Login({ setestadoLogin }) {
       .post(url, data)
       .then((response) => {
         const datosJson = JSON.stringify(response.data);
-        Cookies.set("userData", datosJson);
+        localStorage.setItem("userData", datosJson);
         dispatch(addUser(response.data));
         console.log(response.data);
         setestadoLogin(false);

@@ -50,7 +50,7 @@ function navegador(props) {
             <div
               className="submenu"
               style={{ display: mostrarDiv ? "block" : "none" }}>
-              {state[0].tipo == "admin" ? (
+              {state.tipo == "admin" ? (
                 <NavLink to="/admin" onClick={() => setMostrarDiv(false)}>
                   Admin
                 </NavLink>

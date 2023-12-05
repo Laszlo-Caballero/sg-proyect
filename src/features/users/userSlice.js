@@ -1,9 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import Cookies from "js-cookie";
 
 const obtenerValorCookie = (nombreCookie, valorPredeterminado) => {
-  const valorCookie = Cookies.get(nombreCookie);
-  return valorCookie ? JSON.parse(valorCookie) : valorPredeterminado;
+  const valorJson = localStorage.getItem(nombreCookie);
+  return valorJson ? JSON.parse(valorJson) : valorPredeterminado;
 };
 const valorInicial = obtenerValorCookie("userData", []);
 export const userSlice = createSlice({
@@ -15,7 +14,7 @@ export const userSlice = createSlice({
     },
     deleteUsuer: (state, action) => {
       state.shift();
-      Cookies.remove("userData");
+      localStorage.removeItem("userData");
     },
   },
 });

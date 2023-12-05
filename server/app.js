@@ -7,7 +7,6 @@ const bodyparser = require("body-parser");
 const port = process.env.PORT;
 
 console.clear();
-sqlC();
 app.use(cors());
 app.use(bodyparser.json());
 app.use("/api", require("./routers"));

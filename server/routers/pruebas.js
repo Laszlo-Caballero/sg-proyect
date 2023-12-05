@@ -8,7 +8,6 @@ router.post("/", (req, res) => {
   const { nombre } = req.body;
   res.json({ id: id, nombre: nombre });
 });
-router.use("/otraprueba", require("../controllers/otraprueba"));
 
 router.get("/", (req, res) => {
   const correo = req.body;
